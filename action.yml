@@ -33,6 +33,6 @@ runs:
       shell: bash
       run: |
         export QT_LOGGING_RULES='*.debug=true'
-        ll-builder repo update stable https://repo-cdn77.linyaps.org.cn
+        ll-builder repo enable-mirror stable 
         ll-builder build --skip-output-check
         ll-builder export --layer
