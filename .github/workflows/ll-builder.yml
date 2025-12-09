@@ -17,3 +17,8 @@ jobs:
 
       - name: ll-builder-build
         uses: myml/linglong-builder-action@main
+      
+      - uses: actions/upload-artifact@v4
+        with:
+          name: layers
+          path: ./*.layer
