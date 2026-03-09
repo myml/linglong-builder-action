@@ -33,8 +33,8 @@ runs:
       shell: bash
       run: |
         # export QT_LOGGING_RULES='*.debug=true'
-        # ll-builder repo enable-mirror stable
         ll-builder --version
+        ll-builder repo disable-mirror stable
         cat ~/.cache/linglong-builder/config.yaml
         curl https://repo-mirror.cicd.getdeepin.org/api/v2/mirrors/stable
         export LINYAPS_BACKTRACE=true
