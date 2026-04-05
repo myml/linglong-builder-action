@@ -32,9 +32,8 @@ runs:
     - name: Build
       shell: bash
       run: |
-        # export QT_LOGGING_RULES='*.debug=true'
         ll-builder --version
-        ll-builder repo disable-mirror stable
+        ll-builder repo enable-mirror stable
         cat ~/.cache/linglong-builder/config.yaml
         curl https://mirror-repo-linglong.deepin.com/api/v2/mirrors/stable
         export LINYAPS_BACKTRACE=true
