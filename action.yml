@@ -3,7 +3,7 @@ name: "ll-builder-build"
 description: "linyaps builder action"
 author: myml
 inputs:
-  files:
+  file:
     description: "linglong.yaml file path"
     default: "linglong.yaml"
     required: true
@@ -31,7 +31,10 @@ runs:
       with:
         path: |
           ~/.cache/linglong-builder
-        key: Linux-linglong-builder-repo-objects
+        key: linglong-builder-${{ hashFiles(inputs.file) }}
+        restore-keys: |
+          linglong-builder-
+          Linux-linglong-builder-
 
     - name: Build
       shell: bash
