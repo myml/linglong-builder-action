@@ -31,7 +31,7 @@ runs:
       with:
         path: |
           ~/.cache/linglong-builder
-        key: ${{ runner.os }}-linglong-builder-repo-objects
+        key: linglong-builder
 
     - name: Build
       shell: bash
