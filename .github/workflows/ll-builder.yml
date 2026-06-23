@@ -1,4 +1,4 @@
-name: CI
+name: test layer export
 on:
   push:
     branches: ["main"]
