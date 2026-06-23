@@ -37,8 +37,8 @@ runs:
       shell: bash
       run: |
         ll-builder --version
-        ll-builder repo disable-mirror stable
-        echo "    contenturl=https://fi-1.edge.linyaps.org.cn/repos/stable/" >> ~/.cache/linglong-builder/config.yaml
+        ll-builder repo enable-mirror stable
+        # echo "    contenturl=https://fi-1.edge.linyaps.org.cn/repos/stable/" >> ~/.cache/linglong-builder/config.yaml
         cat ~/.cache/linglong-builder/config.yaml
         curl https://mirror-repo-linglong.deepin.com/api/v2/mirrors/stable
         export LINYAPS_BACKTRACE=true
